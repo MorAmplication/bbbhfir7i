@@ -6,7 +6,8 @@ import { GqlDefaultAuthGuard } from "./gqlDefaultAuth.guard";
 import { UserData } from "./userData.decorator";
 import { LoginArgs } from "./LoginArgs";
 import { MorInfo } from "./MorInfo";
-declare const morInfo;
+declare const mor;
+declare const morInfo: MorInfo;
 
 @Resolver(MorInfo)
 export class AuthResolver {
@@ -18,7 +19,7 @@ export class AuthResolver {
 
   @Query(() => MorInfo)
   @common.UseGuards(GqlDefaultAuthGuard, gqlACGuard.GqlACGuard)
-  async userInfo(morInfo): Promise<MorInfo> {
-    return morInfo;
+  async userInfo(mor): Promise<MorInfo> {
+    return mor;
   }
 }
