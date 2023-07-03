@@ -4,7 +4,6 @@ import { PasswordService } from "./password.service";
 import { TokenService } from "./token.service";
 import { MorInfo } from "./MorInfo";
 import { MorService } from "../mor/mor.service";
-declare const morService;
 
 @Injectable()
 export class AuthService {
