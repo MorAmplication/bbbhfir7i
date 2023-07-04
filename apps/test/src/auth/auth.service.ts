@@ -8,9 +8,9 @@ import { MorService } from "../mor/mor.service";
 @Injectable()
 export class AuthService {
   constructor(
-    private readonly morService,
     private readonly passwordService: PasswordService,
-    private readonly tokenService: TokenService
+    private readonly tokenService: TokenService,
+    private readonly morService: MorService
   ) {}
 
   async validateUser(
