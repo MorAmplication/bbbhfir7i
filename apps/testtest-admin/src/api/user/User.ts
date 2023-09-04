@@ -8,5 +8,4 @@ export type User = {
   lastName: string | null;
   username: string;
   roles: JsonValue;
-  test: string | null;
 };
